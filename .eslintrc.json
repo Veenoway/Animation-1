@@ -1,0 +1,62 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    // "eslint:recommended",
+    // "plugin:react/recommended",
+    // "airbnb",
+    // "airbnb-typescript",
+    // "prettier"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": "latest",
+    "sourceType": "module",
+    "project": ["./tsconfig.json"] // Specify it only for TypeScript files
+  },
+  "plugins": [
+    "react",
+    "@typescript-eslint",
+    "prettier",
+    "react-hooks",
+    "only-warn"
+  ],
+  "overrides": [
+    {
+      "files": ["**/*.ts", "**/*.tsx"]
+    }
+  ],
+  "rules": {
+    "react/jsx-filename-extension": [
+      2,
+      {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    ],
+    "react/function-component-definition": "off",
+    "react/jsx-props-no-spreading": "off",
+    "import/extensions": "off",
+    "quotes": [
+      2,
+      "double",
+      {
+        "avoidEscape": true
+      }
+    ],
+    "react/require-default-props": "off",
+    "no-console": "off",
+    "no-void": "off"
+  }
+}
